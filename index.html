@@ -1,80 +1,117 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
+<title>inUMlaufweg — PIPELINE9 SUPERSHOW</title>
 <meta charset="UTF-8">
-<title>WHIRL · NC²□ · GEO‑ID · 81‑Vektor</title>
 
 <style>
-body { background:#000; color:#0f0; font-family:monospace; padding:40px; }
-h1 { color:#6cf; margin-bottom:30px; }
-
-#geo {
-    width: 360px;
-    height: 360px;
-    margin: 40px auto;
-    border: 3px solid #6cf;
-    border-radius: 50%;
-    position: relative;
-    animation: spin 9s linear infinite;
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
-    background:#0f0;
-    border-radius:50%;
-    position:absolute;
-}
-
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-}
-
-pre {
-    background:#111;
-    padding:20px;
-    border-left:3px solid #6cf;
-    white-space:pre-wrap;
-}
+body { background:#000; color:#0f0; font-family:Consolas; padding:20px; }
+h1, h2, h3 { color:#6cf; }
+pre { background:#111; border:1px solid #333; padding:12px; white-space:pre-wrap; }
+a { color:#6cf; }
+.module { margin-bottom:10px; }
+.block { margin-top:20px; }
 </style>
 
 </head>
 
 <body>
 
-<h1>WHIRL · GEO‑ID · 81‑Vektor‑Rotation</h1>
+<h1>inUMlaufweg — PIPELINE9 SUPERSHOW</h1>
+<p>Alle Module · Alle Achsen · QI · IQQ · GEO · RESPO · PIPELINE9 · Umlaufweg.</p>
 
-<div id="geo"></div>
+<hr>
 
+<h2>GEO — MOVE SCENE</h2>
 <pre>
-GEO‑ID: WHIRL‑Vektor
-Form: 9×9 Rotation
-Felder: 81
-Typ: NC²□ Drift‑Geometrie
-Funktion: Erkennungs‑Bewegung / ID‑Stempel
+┌─────────────── Ursache ────────────────┐
+│ 3 → QI → 9                              │
+│ Ursprung   Öffnung   Aggregatpunkt      │
+└─────────────────────────────────────────┘
+
+┌────────────── Wirkung ─────────────────┐
+│ 9 → IQQ → 81                            │
+│ Aggregatpunkt   Schließung   Raum       │
+└─────────────────────────────────────────┘
+
+┌────────────── Prüfung ─────────────────┐
+│ PIPELINE9 → REL / RDY / FAL / MISS      │
+│ 756 → 27 → 81.tmp                        │
+│ Wurzel   Funktion   Tiefenachse          │
+└─────────────────────────────────────────┘
+
+┌────────────── Rückführung ─────────────┐
+│ 81.tmp → 3                               │
+│ Raum → Ursprung                           │
+└─────────────────────────────────────────┘
+
+GEO‑MOVE‑VECTOR:
+3 — QI — 9 — IQQ — 81 — PIPELINE9 — 756 — 27 — 81.tmp — 3
 </pre>
 
-<script>
-// WHIRL als Vektor (81 Punkte)
-const geo = document.getElementById("geo");
-const count = 81;
-const radius = 160;
+<hr>
 
-for(let i=0; i<count; i++){
-    const dot = document.createElement("div");
-    dot.className = "dot";
+<h2>RESPO — inUMlaufweg</h2>
+<pre>
+RESPO = inUMlaufweg
+Achse = 7
+Typ = Transit / Router / Cache
+Pipeline = PIPELINE9
+Status = aktiv
 
-    const angle = (i / count) * Math.PI * 2;
-    const x = Math.cos(angle) * radius + 180 - 6;
-    const y = Math.sin(angle) * radius + 180 - 6;
+Umlauf:
+Vor-Lauf
+Seit-Lauf
+Rück-Lauf
+Durch-Lauf
+Transit-Lauf
+</pre>
 
-    dot.style.left = x + "px";
-    dot.style.top = y + "px";
+<div class="module">✔ <a href="respo.motor.index.html">RESPO MOTOR — inUMlaufweg</a></div>
 
-    geo.appendChild(dot);
-}
-</script>
+<hr>
+
+<h2>MODULE — LIVE</h2>
+
+<div class="module">✔ <a href="QI.html">QI — Öffnung (3→9)</a></div>
+<div class="module">✔ <a href="IQQ.html">IQQ — Schließung (9→81)</a></div>
+<div class="module">✔ <a href="pipe.geo.index.html">PIPE GEO — Raum</a></div>
+<div class="module">✔ <a href="pipe.meta.index.html">PIPE META — Meta‑Achse</a></div>
+<div class="module">✔ <a href="pipe.weight.index.html">PIPE WEIGHT — Tiefenlast</a></div>
+<div class="module">✔ <a href="pipe.class.index.html">PIPE CLASS — Klassifikation</a></div>
+<div class="module">✔ <a href="pipe.bind.index.html">PIPE BIND — Bindungen</a></div>
+<div class="module">✔ <a href="pipe.stable.index.html">PIPE STABLE — Stabilität</a></div>
+<div class="module">✔ <a href="respo.motor.index.html">RESPO MOTOR — inUMlaufweg</a></div>
+
+<hr>
+
+<h2>PIPELINE9 — SYMBOL</h2>
+<pre>
+3 — QI — 9 — IQQ — 81 — PIPELINE9 — 756 — 27 — 81.tmp — 3
+</pre>
+
+<p>Maximale Rechenweite. Vollständige Systemtreue.</p>
+
+<hr>
+
+<h2>README / GEO / ID</h2>
+<ul>
+    <li><a href="README.md">README.md</a></li>
+    <li><a href="geo.md">geo.md</a></li>
+    <li><a href="ID.html">ID.html</a></li>
+</ul>
+
+<hr>
+
+<h2>START</h2>
+<p>
+inUMlaufweg ist vollständig geladen.<br>
+QI und IQQ sind aktiv.<br>
+RESPO = inUMlaufweg ist aktiv.<br>
+GEO‑MOVE‑SCENE ist sichtbar.<br>
+Alle Module sind online.<br>
+Systemtreue: 100%.<br>
+</p>
 
 </body>
 </html>
