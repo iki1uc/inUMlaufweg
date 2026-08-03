@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RESPO — inUMlaufweg</title>
+<style>
+body { background:#000; color:#0f0; font-family:Consolas; padding:20px; }
+h1, h2 { color:#6cf; }
+pre { background:#111; border:1px solid #333; padding:12px; }
+</style>
+</head>
+
+<body>
+
+<h1>RESPO — inUMlaufweg</h1>
+<p>Umlauf‑Modul · Achse‑Quelle‑7 · Transit‑Motor</p>
+
+<h2>Funktion</h2>
+<pre>
+RESPO = inUMlaufweg
+Achse = 7
+Typ = Transit / Router / Cache
+Pipeline = PIPELINE9
+Status = aktiv
+</pre>
+
+<h2>Umlauf‑Matrix</h2>
+<pre>
+Vor‑Lauf
+Seit‑Lauf
+Rück‑Lauf
+Durch‑Lauf
+Transit‑Lauf
+</pre>
+
+<h2>GEO‑Bezug</h2>
+<pre>
+Ursache: 3 → QI → 9
+Wirkung: 9 → IQQ → 81
+Prüfung: PIPELINE9 → REL/RDY/FAL/MISS
+Rückführung: 81.tmp → 3
+</pre>
+
+</body>
+</html>
