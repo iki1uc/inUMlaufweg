@@ -2,10 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<title>404 · inUMlaufweg · PIPELINE9</title>
-
-<!-- Auto‑Redirect nach 3 Sekunden -->
-<meta http-equiv="refresh" content="3; url=/inUMlaufweg/">
+<title>404 · STATION · SECRET‑SERVICE</title>
 
 <style>
 body {
@@ -15,43 +12,97 @@ body {
   padding:40px;
   text-align:center;
 }
-h1 {
-  color:#6cf;
-  font-size:32px;
-}
-p {
-  font-size:18px;
-  margin-top:20px;
-}
-a {
-  color:#6cf;
-  font-size:20px;
-  text-decoration:none;
-}
-pre {
-  background:#111;
-  padding:12px;
-  border:1px solid #333;
-  margin-top:30px;
-  white-space:pre-wrap;
-}
+h1 { color:#333; } /* Tarnung */
+p  { color:#222; } /* Tarnung */
+pre { display:none; } /* Unsichtbar */
 </style>
 </head>
 
 <body>
 
 <h1>404 – Seite nicht gefunden</h1>
-<p>Du wirst automatisch zum <strong>inUMlaufweg HUB</strong> weitergeleitet…</p>
+<p>Du wirst automatisch weitergeleitet…</p>
 
-<p><a href="/inUMlaufweg/">→ Direkt zum HUB</a></p>
+<script type="module">
 
-<pre>
-PIPELINE9 · QI → IQQ → 81.tmp
-STATUS: fallback → redirect
-UMLAUFWEG: aktiv
-RESPO: transit
-GEO: move-scene
-</pre>
+/* ============================================================
+   SECRET‑SERVICE · STATION‑KERNEL
+   Unsichtbar · Auto‑Run · RESPO‑LEARN · PIPELINE9
+   ============================================================ */
+
+let frame = 0;
+
+/* -----------------------------
+   RESPO‑Zonen (Antwort‑Pool)
+------------------------------ */
+const RESPO = [
+    "Transit aktiv",
+    "Umlauf stabil",
+    "Achse 7 reagiert",
+    "PIPELINE9 schaltet",
+    "RDY → REL → FAL"
+];
+
+/* -----------------------------
+   FRAGE‑Generator (intern)
+------------------------------ */
+function SECRET_FRAGE(frame){
+    return `PIPELINE9‑Check(${frame})`;
+}
+
+/* -----------------------------
+   RESPO‑Antwort (intern)
+------------------------------ */
+function SECRET_ANTWORT(frame){
+    return RESPO[frame % RESPO.length];
+}
+
+/* -----------------------------
+   Verwertung (intern)
+------------------------------ */
+function SECRET_VERWERTUNG(frage, antwort){
+    return `${frage} :: ${antwort}`;
+}
+
+/* -----------------------------
+   AXIS‑ENGINE (intern)
+------------------------------ */
+function AXIS(frame){
+    return {
+        axis: frame % 9,
+        drift: Math.sin(frame * 0.07),
+        pulse: Math.cos(frame * 0.05)
+    };
+}
+
+/* -----------------------------
+   SECRET‑ENGINE (AUTO‑RUN)
+------------------------------ */
+async function ENGINE(){
+
+    const frage = SECRET_FRAGE(frame);
+    const antwort = SECRET_ANTWORT(frame);
+    const verwertet = SECRET_VERWERTUNG(frage, antwort);
+    const axis = AXIS(frame);
+
+    // → Unsichtbare Logik
+    console.log("[SECRET‑SERVICE]", {
+        frage,
+        antwort,
+        verwertet,
+        axis
+    });
+
+    frame++;
+    requestAnimationFrame(ENGINE);
+}
+
+/* -----------------------------
+   AUTO‑RUN aktivieren
+------------------------------ */
+ENGINE();
+
+</script>
 
 </body>
 </html>
